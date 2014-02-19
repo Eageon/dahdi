@@ -1102,6 +1102,11 @@ struct dahdi_vmwi_info {
  */
 #define DAHDI_BUFFER_EVENTS		_IOW(DAHDI_CODE, 105, int)
 
+/*
+  User define ioctl command
+*/
+#define DAHDI_DO_POWER			_IOW(DAHDI_CODE, 110, int)
+
 /* Get current status IOCTL */
 /* Defines for Radio Status (dahdi_radio_stat.radstat) bits */
 

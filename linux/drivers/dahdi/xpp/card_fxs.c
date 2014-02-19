@@ -1140,6 +1140,9 @@ static int FXS_card_ioctl(xpd_t *xpd, int pos, unsigned int cmd,
 		LINE_DBG(SIGNAL, xpd, pos, "DAHDI_VMWI: %s\n",
 			 (val) ? "yes" : "no");
 		return 0;
+	case DAHDI_DO_POWER:
+		return do_chan_power(xbus, xpd, pos, 1);
+
 	default:
 		report_bad_ioctl(THIS_MODULE->name, xpd, pos, cmd);
 	}
